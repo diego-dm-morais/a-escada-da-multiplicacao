@@ -33,8 +33,10 @@ Roda o fluxo completo a partir de um link do YouTube, em ordem:
    - Confere geração e publicação de `content/mind-map/html/<titulo-slug>.html` e do `content/mind-map/png/<titulo-slug>.png` de alta resolução gerado junto (pronto pra WhatsApp).
 4. Rodar a skill `jornada-multiplicacao` (sem argumento — ela varre `content/youtube/` sozinha) para incorporar esse capítulo novo no arquivo vivo `content/mind-map/html/jornada-para-multiplicao.html`.
    - Confere que o capítulo novo entrou no comentário de controle e que o artifact foi republicado.
-5. Atualizar `index.html` (raiz do projeto): adicionar um novo `<li><a href="content/mind-map/html/<titulo-slug>.html">...</a></li>` para o capítulo recém-gerado, seguindo o mesmo padrão dos links já existentes (nome do capítulo, href URL-encoded do arquivo html novo).
-   - Não remover nem reordenar os links existentes — só inserir o novo (mantendo a ordem cronológica/capítulo).
+5. Atualizar `index.html` (raiz do projeto), mantendo o template atual (hero com `assets/stairway-sunrise.png`, cartões `.map-link.chapter` dentro de `<ol class="chapters">`) — não trocar por layout simples de lista:
+   - Adicionar um novo `<li><a class="map-link chapter" href="content/mind-map/html/<titulo-slug-url-encoded>.html">...</a></li>` dentro de `<ol class="chapters">`, ao final, seguindo exatamente a mesma estrutura interna dos `<li>` existentes: `.thumbnail` (SVG com `<image href="assets/design-reference.png" width="1143" height="1052"/>` e `viewBox="54 Y 165 91"`), `.number` com o próximo número sequencial, `.copy` com `<h2>Cap. N — <Título></h2>` e um `<p>` de uma frase-gancho, e `.access`.
+   - Para o `viewBox` do `.thumbnail`, incrementar o `Y` em ~106–107 em relação ao último capítulo (padrão observado: 475, 581, 688 — cada novo capítulo soma ~106/107 ao Y anterior), fatiando uma faixa nova de `assets/design-reference.png` sem repetir a de outro capítulo.
+   - Não remover, reordenar nem reescrever os `<li>` existentes — só inserir o novo ao final, na ordem cronológica dos capítulos.
 6. Commitar e dar push pra `main`:
    - `git add -A`
    - `git commit -m "..."` (mensagem descrevendo o capítulo processado)
