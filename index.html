@@ -1,69 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Escada da Multiplicação — Mapas Mentais</title>
-<style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 48px 24px;
-    background: #faf7f2;
-    color: #2b2b2b;
-  }
-  h1 { font-size: 1.8rem; margin-bottom: 0.25em; }
-  p.subtitle { color: #6b6b6b; margin-top: 0; }
-  ul { list-style: none; padding: 0; margin-top: 32px; }
-  li { margin-bottom: 14px; }
-  a {
-    display: block;
-    padding: 16px 20px;
-    background: #fff;
-    border: 1px solid #e3ddd2;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #2b2b2b;
-    font-weight: 600;
-    transition: box-shadow 0.15s ease;
-  }
-  a:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
-  a span.tag {
-    display: block;
-    font-weight: 400;
-    font-size: 0.85rem;
-    color: #8a8a8a;
-    margin-top: 4px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f2e9">
+  <meta name="description" content="A Escada da Multiplicação: mapas mentais para uma jornada de 21 dias de jejum, oração e intimidade com Cristo.">
+  <title>A Escada da Multiplicação — Mapas Mentais</title>
+  <link rel="preload" href="assets/stairway-sunrise.png" as="image">
+  <style>
+    :root { color-scheme: light; --ink: #23180e; --paper: #f7f2e9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: radial-gradient(ellipse at 50% 60%, #fffdf9 0%, #f7f2e9 65%, #eee3d1 100%); font-family: 'Times New Roman', Georgia, serif; }
+    a { color: inherit; }
+    .skip-link { position: absolute; top: 12px; left: 12px; z-index: 5; padding: 12px 18px; background: white; transform: translateY(-150%); }
+    .skip-link:focus { transform: none; }
+    .hero { height: 397px; background: url('assets/stairway-sunrise.png') center / cover no-repeat; position: relative; }
+    .hero-inner { max-width: 1144px; margin: auto; padding: 40px 80px 76px; position: relative; }
+    .eyebrow { border-left: 2px solid #c99950; padding-left: 19px; margin: 0 0 12px -7px; font: 700 12px/1.25 Arial, sans-serif; letter-spacing: 3px; }
+    .category { margin: 0 0 12px 14px; font: 10px/1.3 Arial, sans-serif; letter-spacing: 2px; }
+    h1 { font-size: clamp(60px, 7.2vw, 84px); line-height: .95; letter-spacing: -3px; margin: 0; font-weight: 700; color: #1c1007; }
+    h1 span { display: block; color: #94500c; }
+    .intro { max-width: 455px; font-size: 17px; line-height: 1.4; margin: 16px 0 0; }
+    .rock-note { position: absolute; right: 54px; top: 151px; transform: rotate(-10deg); text-align: center; color: #d3c5ae; font: 700 23px/1.04 'Arial Narrow', Arial, sans-serif; opacity: .82; text-shadow: 0 2px 4px #2b2119; }
+    .rock-note::after { content: ''; display: block; width: 48px; height: 3px; background: currentColor; margin: 13px auto 0; }
+    main { max-width: 1052px; margin: -44px auto 0; position: relative; padding: 0 0 30px; }
+    .map-link { display: flex; align-items: center; text-decoration: none; border: 1px solid #e3d3bc; border-radius: 12px; background: #fcfaf7; box-shadow: 0 10px 25px #5b3d1b12; overflow: hidden; transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease; }
+    .map-link:hover { transform: translateY(-2px); border-color: #bc8d4b; box-shadow: 0 12px 28px #5b3d1b25; }
+    a:focus-visible { outline: 3px solid #8b4e0d; outline-offset: 5px; }
+    .journey { min-height: 109px; padding: 12px 23px 12px 32px; border-color: #d29a48; background: linear-gradient(100deg, #fff3dccc 0%, #fff9edee 45%, #ffe6b699 100%), url('assets/stairway-sunrise.png') center 62% / cover; box-shadow: inset 0 1px 2px #fff, 0 8px 24px #5b3d1b12; }
+    .medallion { flex: 0 0 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; margin-right: 46px; color: #fff9e9; background: linear-gradient(135deg, #ffc25d 5%, #b46d13 40%, #663508 100%); border: 2px solid #fff0cb; box-shadow: 0 0 0 2px #d1a04e66, 0 2px 9px #7b45052b; }
+    .medallion svg { width: 66px; height: 60px; }
+    .copy { flex: 1; min-width: 0; }
+    h2 { font-size: 22px; line-height: 1.2; margin: 0; color: #191510; }
+    .journey h2 { font-size: 26px; }
+    .copy p { margin: 5px 0 0; font-size: 17px; line-height: 1.3; color: #645346; }
+    .access { flex: 0 0 137px; margin-left: 20px; min-height: 46px; display: flex; align-items: center; justify-content: center; gap: 20px; border: 1px solid #e9cfaa; border-radius: 30px; background: #f3eee5; color: #6e3d14; font: 600 14px/1 Arial, sans-serif; }
+    .access svg { width: 9px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; }
+    .journey .access { background: linear-gradient(135deg, #be791d, #77400e); color: #fff9ee; border-color: #f2cb8a; min-height: 49px; }
+    .chapters { list-style: none; margin: 12px 0 0; padding: 0 3px; display: grid; gap: 13px; }
+    .chapter { min-height: 93px; padding-right: 22px; }
+    .thumbnail { width: 165px; height: 91px; flex: 0 0 165px; position: relative; overflow: hidden; }
+    .thumbnail svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .number { flex: 0 0 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; margin: 0 29px 0 34px; font-size: 27px; font-weight: bold; background: linear-gradient(120deg, #deb77f, #efd5a7); box-shadow: inset 0 1px 2px #bd8a4340; color: #2e1b09; }
+    .scripture { margin: 31px auto 0; text-align: center; padding: 0 60px; }
+    blockquote { font-size: 20px; line-height: 1.25; font-style: italic; margin: 0; color: #30281f; }
+    .scripture figcaption { margin-top: 13px; font: 12px/1.5 Arial, sans-serif; color: #856b4f; }
+    .scripture a { text-decoration: none; }
+    .scripture a:hover { text-decoration: underline; }
+    .scripture::after { content: ''; display: block; width: 32px; height: 2px; background: #dda549; margin: 19px auto 0; }
+    footer { position: relative; display: flex; align-items: center; justify-content: center; min-height: 115px; padding-top: 16px; }
+    .pillars { list-style: none; padding: 0; margin: 0 110px 0 0; display: flex; }
+    .pillar { width: 155px; position: relative; text-align: center; color: #6c411d; font: 12px/1.35 Arial, sans-serif; }
+    .pillar + .pillar::before { position: absolute; content: ''; left: 0; top: 11px; height: 44px; border-left: 1px solid #d8b98c; }
+    .pillar svg { display: block; margin: 0 auto 6px; width: 35px; height: 32px; color: #b47826; stroke: currentColor; stroke-width: 1.8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .pillar strong { display: block; font-size: 11px; letter-spacing: .7px; }
+    .signature { filter: brightness(1.15) contrast(1.4); position: absolute; right: 0; width: 124px; height: 91px; background: url('assets/design-reference.png') -982px -943px / 1143px 1052px no-repeat; mix-blend-mode: multiply; }
+    @media (min-width: 1440px) { .hero { background-position: center 55%; } }
+    @media (max-width: 1100px) {
+      main { margin-left: 4.4%; margin-right: 4.4%; }
+      .hero-inner { padding-left: 7%; padding-right: 7%; }
+      h2 { font-size: 20px; }
+      .number { margin-left: 22px; margin-right: 22px; }
+      .thumbnail { width: 145px; flex-basis: 145px; }
+      .copy p { font-size: 16px; }
+      .access { flex-basis: 120px; margin-left: 14px; }
+      .rock-note { right: 30px; font-size: 20px; }
+    }
+    @media (max-width: 760px) {
+      .hero { height: 405px; background-position: 62% center; }
+      .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #fff5e5d9, #fff5e570 62%, transparent); }
+      .hero-inner { padding: 30px 24px 75px; }
+      .eyebrow { font-size: 10px; letter-spacing: 2.3px; margin-left: 0; }
+      .category { margin-left: 21px; font-size: 9px; margin-bottom: 24px; }
+      h1 { font-size: clamp(40px, 8.6vw, 65px); letter-spacing: -1.8px; line-height: 1; }
+      .intro { font-size: 16px; max-width: 350px; margin-top: 20px; }
+      .rock-note { display: none; }
+      main { margin-left: 16px; margin-right: 16px; }
+      .journey { padding: 18px; flex-wrap: wrap; }
+      .medallion { flex-basis: 58px; height: 58px; margin-right: 16px; }
+      .medallion svg { width: 46px; height: 44px; }
+      .journey .copy { flex-basis: calc(100% - 74px); }
+      .journey h2 { font-size: 22px; }
+      .journey .access { margin: 15px 0 0 74px; min-height: 42px; flex-basis: 130px; }
+      .chapters { padding: 0; gap: 12px; }
+      .chapter { display: grid; grid-template-columns: 100px 1fr; position: relative; padding: 0; align-items: stretch; }
+      .thumbnail { width: 100px; height: auto; min-height: 151px; }
+      .number { position: absolute; left: 8px; top: 8px; margin: 0; width: 28px; height: 28px; font-size: 18px; border: 1px solid #fff2d6; }
+      .chapter .copy { padding: 16px 14px 53px; }
+      h2 { font-size: 18px; line-height: 1.2; }
+      .copy p { font-size: 14px; line-height: 1.4; }
+      .chapter .access { position: absolute; bottom: 12px; left: 114px; min-height: 32px; width: 104px; margin: 0; font-size: 12px; gap: 15px; }
+      .scripture { padding: 0 10px; margin-top: 28px; }
+      blockquote { font-size: 18px; line-height: 1.45; }
+      .desktop-break { display: none; }
+      footer { flex-direction: column; gap: 22px; padding-top: 22px; }
+      .pillars { margin: 0; width: 100%; }
+      .pillar { width: 25%; font-size: 11px; }
+      .pillar strong { font-size: 9px; letter-spacing: .2px; }
+      .signature { position: static; }
+    }
+    @media (prefers-reduced-motion: reduce) { .map-link { transition: none; } .map-link:hover { transform: none; } }
+  </style>
 </head>
 <body>
-  <h1>A Escada da Multiplicação</h1>
-  <p class="subtitle">Mapas mentais — 21 Dias de Jejum e Oração</p>
-  <ul>
-    <li>
-      <a href="content/mind-map/html/jornada-para-multiplicao.html">
-        Jornada para a Multiplicação
-        <span class="tag">Visão geral</span>
+  <a class="skip-link" href="#maps">Ir para os mapas mentais</a>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">21 DIAS DE<br>JEJUM E ORAÇÃO</p>
+      <p class="category">MAPAS MENTAIS</p>
+      <h1>A Escada da <span>Multiplicação</span></h1>
+      <p class="intro">Cada degrau é um passo de fé. Uma jornada de intimidade, obediência e multiplicação em Cristo.</p>
+      <div class="rock-note" aria-hidden="true">COM<br>CRISTO<br>SEMPRE<br>MAIS</div>
+    </div>
+  </header>
+  <main id="maps">
+    <nav aria-label="Mapas mentais da jornada">
+      <a class="map-link journey" href="content/mind-map/html/jornada-para-multiplicao.html">
+        <span class="medallion" aria-hidden="true"><svg viewBox="0 0 70 60"><path fill="currentColor" d="M2 49 18 28l6 6L36 9l13 25 5-5 14 23-16-16-3 6-12-21-7 15-6-4-9 14 4-12z"/></svg></span>
+        <div class="copy"><h2>Jornada para a Multiplicação</h2><p>Visão geral · Entenda o propósito e como trilhar essa jornada.</p></div>
+        <span class="access" aria-hidden="true">Acessar <svg viewBox="0 0 10 16"><path d="m2 2 6 6-6 6"/></svg></span>
       </a>
-    </li>
-    <li>
-      <a href="content/mind-map/html/LIVE-21-Dias-de-Jejum-e-Ora%C3%A7%C3%A3o-Pr-Wilson-Silva-CAP-1-A-Multiplica%C3%A7%C3%A3o-do-Azeite-1409.html">
-        Cap. 1 — A Multiplicação do Azeite
-      </a>
-    </li>
-    <li>
-      <a href="content/mind-map/html/LIVE-21-Dias-de-Jejum-e-Ora%C3%A7%C3%A3o-Pr-Wilson-Silva-Cap-02-Coragem-faz-parte-de-uma-Grande-F%C3%A91509.html">
-        Cap. 2 — Coragem faz parte de uma Grande Fé
-      </a>
-    </li>
-    <li>
-      <a href="content/mind-map/html/LIVE-21-Dias-de-Jejum-e-Ora%C3%A7%C3%A3o-Pr-Wilson-Silva-Cap-3-Esperan%C3%A7a-o-Alimento-da-F%C3%A9-1609.html">
-        Cap. 3 — Esperança, o Alimento da Fé
-      </a>
-    </li>
-  </ul>
+      <ol class="chapters">
+        <li><a class="map-link chapter" href="content/mind-map/html/LIVE-21-Dias-de-Jejum-e-Ora%C3%A7%C3%A3o-Pr-Wilson-Silva-CAP-1-A-Multiplica%C3%A7%C3%A3o-do-Azeite-1409.html">
+          <span class="thumbnail" aria-hidden="true"><svg viewBox="54 475 165 91" preserveAspectRatio="xMidYMid slice"><image href="assets/design-reference.png" width="1143" height="1052"/></svg></span><span class="number" aria-hidden="true">1</span>
+          <div class="copy"><h2>Cap. 1 — A Multiplicação do Azeite</h2><p>Descubra como a obediência simples libera o sobrenatural.</p></div>
+          <span class="access" aria-hidden="true">Acessar <svg viewBox="0 0 10 16"><path d="m2 2 6 6-6 6"/></svg></span>
+        </a></li>
+        <li><a class="map-link chapter" href="content/mind-map/html/LIVE-21-Dias-de-Jejum-e-Ora%C3%A7%C3%A3o-Pr-Wilson-Silva-Cap-02-Coragem-faz-parte-de-uma-Grande-F%C3%A91509.html">
+          <span class="thumbnail" aria-hidden="true"><svg viewBox="54 581 165 91" preserveAspectRatio="xMidYMid slice"><image href="assets/design-reference.png" width="1143" height="1052"/></svg></span><span class="number" aria-hidden="true">2</span>
+          <div class="copy"><h2>Cap. 2 — Coragem faz parte de uma Grande Fé</h2><p>Aprenda a agir com ousadia, mesmo diante do medo.</p></div>
+          <span class="access" aria-hidden="true">Acessar <svg viewBox="0 0 10 16"><path d="m2 2 6 6-6 6"/></svg></span>
+        </a></li>
+        <li><a class="map-link chapter" href="content/mind-map/html/LIVE-21-Dias-de-Jejum-e-Ora%C3%A7%C3%A3o-Pr-Wilson-Silva-Cap-3-Esperan%C3%A7a-o-Alimento-da-F%C3%A9-1609.html">
+          <span class="thumbnail" aria-hidden="true"><svg viewBox="54 688 165 91" preserveAspectRatio="xMidYMid slice"><image href="assets/design-reference.png" width="1143" height="1052"/></svg></span><span class="number" aria-hidden="true">3</span>
+          <div class="copy"><h2>Cap. 3 — Esperança, o Alimento da Fé</h2><p>Mantenha-se firme, mesmo quando a resposta demora.</p></div>
+          <span class="access" aria-hidden="true">Acessar <svg viewBox="0 0 10 16"><path d="m2 2 6 6-6 6"/></svg></span>
+        </a></li>
+      </ol>
+    </nav>
+    <figure class="scripture">
+      <blockquote cite="https://www.bibliaonline.com.br/acf/hb/6/17-20">“A qual temos como âncora da alma, segura e firme,<br class="desktop-break"> e que penetra até ao interior do véu, Onde Jesus, nosso precursor,<br class="desktop-break"> entrou por nós, feito eternamente sumo sacerdote, segundo a ordem de Melquisedeque.”</blockquote>
+      <figcaption><a href="https://www.bibliaonline.com.br/acf/hb/6/17-20">Hebreus 6:19–20 (ACF)</a></figcaption>
+    </figure>
+    <footer>
+      <ul class="pillars" aria-label="Pilares da jornada">
+        <li class="pillar"><svg viewBox="0 0 36 34" aria-hidden="true"><path fill="currentColor" stroke="none" d="M17 23C5 23 2 13 2 7c12-1 17 5 15 16ZM20 23C19 10 26 5 36 5c-1 12-6 19-16 18Z"/><path d="M18 31c0-10 6-16 13-21M18 27 8 13" stroke="#e3b96e"/></svg><strong>JEJUM</strong>Disciplina</li>
+        <li class="pillar"><svg viewBox="0 0 36 34" aria-hidden="true"><path d="M18 8C13 3 6 4 3 6v23c5-3 10-3 15 0 5-3 10-3 15 0V6c-5-3-11-2-15 2Zm0 0v21"/></svg><strong>PALAVRA</strong>Direção</li>
+        <li class="pillar"><svg viewBox="0 0 36 34" aria-hidden="true"><path d="m7 31 5-7 1-11 4-10 1 2v17l-5 9M29 31l-5-7-1-11-4-10-1 2m0 17 5 9M8 25l-2 4m22-4 2 4"/></svg><strong>ORAÇÃO</strong>Conexão</li>
+        <li class="pillar"><svg viewBox="0 0 36 34" aria-hidden="true"><g fill="currentColor" stroke="none"><rect x="5" y="21" width="6" height="12" rx="2"/><rect x="15" y="13" width="6" height="20" rx="2"/><rect x="25" y="5" width="6" height="28" rx="2"/></g></svg><strong>MULTIPLICAÇÃO</strong>Fruto</li>
+      </ul>
+      <span class="signature" role="img" aria-label="Cristo no Centro"></span>
+    </footer>
+  </main>
 </body>
 </html>
