@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>A Escada da Grande Fé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf6ee;
+    --bg-2:#f2ead9;
+    --ink:#2b2318;
+    --ink-soft:#6b5f4e;
+    --line:#d9cbb0;
+    --azeite:#c17f3a;
+    --azeite-ink:#7a4d1e;
+    --gold:#c99a3a;
+    --card-bg:#ffffff;
+    --shadow: 0 16px 34px -20px rgba(60,40,10,.35);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1c1712;
+      --bg-2:#241d16;
+      --ink:#f1e9d8;
+      --ink-soft:#c3b49a;
+      --line:#4a3f2f;
+      --azeite:#e2a75c;
+      --azeite-ink:#f3cf95;
+      --gold:#e0b95a;
+      --card-bg:#2a231b;
+      --shadow: 0 16px 34px -20px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1c1712;
+    --bg-2:#241d16;
+    --ink:#f1e9d8;
+    --ink-soft:#c3b49a;
+    --line:#4a3f2f;
+    --azeite:#e2a75c;
+    --azeite-ink:#f3cf95;
+    --gold:#e0b95a;
+    --card-bg:#2a231b;
+    --shadow: 0 16px 34px -20px rgba(0,0,0,.6);
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(1200px 500px at 50% -10%, var(--bg-2), transparent 60%),
+      var(--bg);
+    color:var(--ink);
+    font-family:'Source Sans 3',system-ui,sans-serif;
+    padding-inline:20px;
+    padding-block:48px 72px;
+    line-height:1.5;
+  }
+
+  .wrap{max-width:640px;margin:0 auto}
+
+  h1,h2{font-family:'Fraunces',Georgia,serif;text-wrap:balance}
+
+  header.hero{
+    text-align:center;
+    margin-bottom:48px;
+  }
+  .eyebrow{
+    font-size:.76rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--azeite-ink);
+    font-weight:700;
+    margin-bottom:12px;
+  }
+  h1.title{
+    font-size:clamp(2rem,6vw,2.8rem);
+    font-weight:700;
+    margin:0 0 14px;
+  }
+  .lede{
+    max-width:52ch;
+    margin:0 auto;
+    color:var(--ink-soft);
+    font-size:1.02rem;
+  }
+
+  .flow{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0;
+  }
+
+  .step{
+    width:100%;
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:18px 22px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    text-align:left;
+  }
+  .step .num{
+    flex:none;
+    width:38px;height:38px;
+    border-radius:50%;
+    background:color-mix(in srgb, var(--azeite) 18%, transparent);
+    color:var(--azeite-ink);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:1.05rem;
+  }
+  .step .txt h3{
+    margin:0 0 3px;
+    font-size:1.15rem;
+    font-weight:600;
+  }
+  .step .txt p{
+    margin:0 0 8px;
+    font-size:.88rem;
+    color:var(--ink-soft);
+  }
+  .step .txt p:last-child{margin-bottom:0}
+  .step .txt .how{
+    font-size:.86rem;
+    color:var(--ink);
+    background:color-mix(in srgb, var(--azeite) 10%, transparent);
+    border-left:3px solid var(--azeite);
+    padding:6px 10px;
+    border-radius:6px;
+  }
+  .step .txt .how strong{color:var(--azeite-ink)}
+  .step .txt .src{
+    display:inline-block;
+    margin-top:6px;
+    font-size:.7rem;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--ink-soft);
+    background:color-mix(in srgb, var(--ink-soft) 12%, transparent);
+    padding:2px 8px;
+    border-radius:999px;
+  }
+
+  .arrow{
+    height:34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--line);
+    font-size:1.3rem;
+  }
+  .arrow svg{display:block}
+  .arrow path{stroke:color-mix(in srgb, var(--azeite) 55%, var(--line));}
+
+  .step.final{
+    background:radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--gold) 22%, var(--card-bg)), var(--card-bg));
+    border-color:var(--gold);
+  }
+  .step.final .num{
+    background:color-mix(in srgb, var(--gold) 30%, transparent);
+    color:var(--azeite-ink);
+  }
+
+  .closing-card{
+    margin-top:40px;
+    text-align:center;
+    padding:30px 26px;
+    border-radius:22px;
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+  }
+  .closing-card blockquote{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:clamp(1.05rem,2.4vw,1.25rem);
+    max-width:52ch;
+    margin:0 auto 8px;
+  }
+  .closing-card cite{
+    display:block;
+    font-style:normal;
+    font-size:.78rem;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+  }
+  .closing-card p{
+    max-width:54ch;
+    margin:0 auto;
+    color:var(--ink-soft);
+    font-size:.95rem;
+  }
+  .closing-card p strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<!-- capítulos processados: LIVE-21-Dias-de-Jejum-e-Oração-Pr-Wilson-Silva-CAP-1-A-Multiplicação-do-Azeite-1409.md, LIVE-21-Dias-de-Jejum-e-Oração-Pr-Wilson-Silva-Cap-02-Coragem-faz-parte-de-uma-Grande-Fé1509.md, LIVE-21-Dias-de-Jejum-e-Oração-Pr-Wilson-Silva-Cap-3-Esperança-o-Alimento-da-Fé-1609.md -->
+<!-- artifact-url: https://claude.ai/artifact/3P1Hz6hyKg9vw44m5pcYgM -->
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">21 Dias de Jejum e Oração</div>
+    <h1 class="title">O caminho até a Grande Fé</h1>
+    <p class="lede">Um passo puxa o outro — da coragem de agir até a multiplicação.</p>
+  </header>
+
+  <div class="flow">
+
+    <div class="step">
+      <div class="num">1</div>
+      <div class="txt"><h3>Coragem para agir</h3><p>Encarar o problema, não fugir dele.</p><p class="how"><strong>Como fazer:</strong> pare de reclamar da situação e vá atrás de Deus com ela — como a viúva foi a Eliseu, hoje.</p><span class="src">Cap. 2</span></div>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step">
+      <div class="num">2</div>
+      <div class="txt"><h3>Conhecer a Deus</h3><p>Buscar quem Ele é, não só o que Ele pode dar.</p><p class="how"><strong>Como fazer:</strong> leia a Palavra todo dia perguntando "quem Deus é aqui?", não só "o que eu ganho com isso?"</p><span class="src">Cap. 3</span></div>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step">
+      <div class="num">3</div>
+      <div class="txt"><h3>Buscar a Cristo</h3><p>Ir diretamente a Jesus com o problema.</p><p class="how"><strong>Como fazer:</strong> ore falando com Ele especificamente sobre o seu alvo — não uma oração genérica, a sua real necessidade.</p><span class="src">Cap. 1</span></div>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step">
+      <div class="num">4</div>
+      <div class="txt"><h3>Ter intimidade</h3><p>Tempo com Ele que aprofunda a relação.</p><p class="how"><strong>Como fazer:</strong> separe um tempo diário só de comunhão (jejum, devocional, silêncio) — sem pedir nada, só estar com Ele.</p></div>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step">
+      <div class="num">5</div>
+      <div class="txt"><h3>Confiar</h3><p>Intimidade gera confiança no caráter de Deus.</p><p class="how"><strong>Como fazer:</strong> lembre em voz alta o que Deus já fez por você antes — cada memória vira prova de que Ele é fiel agora também.</p><span class="src">Cap. 3</span></div>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step">
+      <div class="num">6</div>
+      <div class="txt"><h3>Ter esperança (esperar)</h3><p>Confiança gera expectativa firme — a âncora da alma.</p><p class="how"><strong>Como fazer:</strong> escreva o que você espera de Deus com clareza — esperança vaga não ancora nada, esperança nomeada sim.</p><span class="src">Cap. 3</span></div>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step">
+      <div class="num">7</div>
+      <div class="txt"><h3>Declarar a palavra já entregue</h3><p>Proclamar em fé o que Deus já prometeu.</p><p class="how"><strong>Como fazer:</strong> fale em voz alta a promessa, todos os dias — "eu creio que será o ano da multiplicação" — proclamar enche do Espírito e firma a fé.</p><span class="src">Cap. 1</span></div>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step">
+      <div class="num">8</div>
+      <div class="txt"><h3>Grande Fé</h3><p>O que conecta a palavra ao milagre.</p><p class="how"><strong>Como fazer:</strong> não pare no primeiro "não" do vento contrário — persista buscando "vasilhas vazias" (mais fé, mais expectativa), sem colocar limite no que Deus quer fazer.</p><span class="src">Cap. 1 · 2 · 3</span></div>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step final">
+      <div class="num">9</div>
+      <div class="txt"><h3>Multiplicação</h3><p>O milagre se manifesta na vida.</p><p class="how"><strong>Como fazer:</strong> busque direção divina para usar bem o que Deus multiplicou — a multiplicação vem para abençoar, não para se perder.</p><span class="src">Cap. 1</span></div>
+    </div>
+
+  </div>
+
+  <div class="closing-card">
+    <blockquote>"A qual temos como âncora da alma, segura e firme, e que penetra até ao interior do véu; onde Jesus, precursor, entrou por nós."</blockquote>
+    <cite>Hebreus 6:19-20 — Almeida Corrigida Fiel (ACF)</cite>
+    <p>Cada passo desse caminho só existe porque <strong>Cristo</strong> já entrou por nós na presença do Pai. Não é mérito nosso — é graça. Descanse nEle, contemple o Seu amor, e deixe que essa graça leve sua fé, degrau a degrau, até a multiplicação.</p>
+  </div>
+
+</div>
+</body>
+</html>
