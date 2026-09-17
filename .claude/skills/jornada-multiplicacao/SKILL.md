@@ -12,7 +12,7 @@ Sem argumento: varre `content/youtube/` inteira e atualiza o arquivo com qualque
 
 ## Estrutura fixa (não mudar)
 
-O arquivo tem 9 passos fixos, nessa ordem — é o modelo da jornada cristã até a multiplicação. Capítulos novos **enriquecem** um ou mais desses passos (texto, "Como fazer", e a tag do capítulo-fonte); eles nunca reordenam, removem ou criam um 10º passo, a menos que o usuário peça explicitamente:
+O arquivo tem 10 passos fixos, nessa ordem — é o modelo da jornada cristã até a multiplicação. Capítulos novos **enriquecem** um ou mais desses passos (texto, "Como fazer", e a tag do capítulo-fonte); eles nunca reordenam, removem ou criam um novo passo, a menos que o usuário peça explicitamente:
 
 1. Coragem para agir
 2. Conhecer a Deus
@@ -20,9 +20,10 @@ O arquivo tem 9 passos fixos, nessa ordem — é o modelo da jornada cristã at�
 4. Ter intimidade
 5. Confiar
 6. Ter esperança (esperar)
-7. Declarar a palavra já entregue
-8. Grande Fé
-9. Multiplicação
+7. Enxergar como Deus vê
+8. Declarar a palavra já entregue
+9. Grande Fé
+10. Multiplicação
 
 ## Passos
 
