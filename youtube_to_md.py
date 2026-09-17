@@ -60,7 +60,10 @@ def transcribe_audio(url: str) -> list[dict]:
 
         mp3_path = Path(tmpdir) / "audio.mp3"
         print("Transcribing audio (faster-whisper, this may take a while)...", file=sys.stderr)
-        model = WhisperModel("small", device="cpu", compute_type="int8")
+        try:
+            model = WhisperModel("small", device="cuda", compute_type="float16")
+        except Exception:
+            model = WhisperModel("small", device="cpu", compute_type="int8")
         segments, _info = model.transcribe(str(mp3_path), language=None, vad_filter=True)
         return [{"text": segment.text} for segment in segments]
 
