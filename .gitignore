@@ -2,3 +2,12 @@ node_modules/
 __pycache__/
 *.pyc
 .env
+.agents/skills/jornada-multiplicacao/SKILL.md
+.agents/skills/marca-texto/SKILL.md
+.agents/skills/mind-map/DESIGN.md
+.agents/skills/mind-map/SKILL.md
+.agents/skills/mind-map/template.html
+.agents/skills/outline/SKILL.md
+.agents/skills/pipe-live/SKILL.md
+.agents/skills/youtube-to-md/SKILL.md
+AGENTS.md
