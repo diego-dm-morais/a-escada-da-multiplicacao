@@ -54,7 +54,14 @@ Exemplo:
 
 4. Todo versículo citado deve estar na versão Almeida Corrigida Fiel (ACF), conforme regra do CLAUDE.md do projeto.
 5. Esboço deve caber em leitura/apresentação de ~10 minutos — direto, sem repetir o texto completo da transcrição, só os pontos-chave.
-6. As duas Declarações (Pão e Vinho) são frases curtas (uma linha, uma frase só, sem dois pontos separando trechos) de Santa Ceia, baseadas no capítulo do dia (tema do vídeo) — sem citar referência formal, só a frase pronta pra líder falar e congregação repetir. Devem ser confissão da própria Palavra de Deus em Cristo Jesus: tom alegre, cristocêntrico, declarando graça e amor (não pedido, não lamento). Sempre iniciar com "Participo desta ceia com meus irmãos e...", seguido de "como do corpo de Cristo" (Pão) ou "bebo do sangue de Cristo" (Vinho) — e a própria declaração de fé do tema do capítulo entra dentro dessa mesma oração, amarrada com "e" ou "porque", não como frase à parte. Exemplo: "Participo desta ceia com meus irmãos e como do corpo de Cristo, porque em Cristo sou multiplicado com alegria!"
+6. As duas Declarações (Pão e Vinho) são frases curtas (uma linha, uma frase só, sem dois pontos separando trechos) de Santa Ceia, baseadas no capítulo do dia — sem citar referência formal, só a frase pronta pra líder falar e congregação repetir. Devem ser confissão da própria Palavra de Deus em Cristo Jesus: tom alegre, cristocêntrico, declarando graça e amor (não pedido, não lamento).
+   - **Não usar prefixo fixo.** A frase "Participo desta ceia com meus irmãos e..." está proibida — cada capítulo tem abertura própria.
+   - A abertura nasce do contexto do capítulo: reler o `## Resumo` e o `## Texto completo` do arquivo de origem em `content/youtube/` e começar a declaração pela imagem/tema central daquele capítulo (ex.: a botija de azeite, o vento contrário, a coragem, a esperança ancorada), em primeira pessoa e no presente.
+   - Cada capítulo deve ter abertura diferente da dos capítulos anteriores já salvos em `content/outline/` — conferir os arquivos existentes antes de escrever, pra não repetir fórmula.
+   - Dentro da mesma frase, amarrar o elemento da ceia: "como do corpo de Cristo" (Pão) ou "bebo do sangue de Cristo" (Vinho), ligado por "e" ou "porque" — nunca como frase à parte.
+   - Exemplos (formato, não fórmula a copiar):
+     - Pão (Cap. Botija de azeite): "A botija que Deus enche não seca, e por isso como do corpo de Cristo sabendo que nEle o pouco vira multiplicação de graça!"
+     - Vinho (Cap. Coragem): "O medo não manda mais em mim, porque bebo do sangue de Cristo e nEle já fui perdoado e feito corajoso!"
 7. Salvar em `content/outline/<mesmo-nome-do-arquivo-de-origem>.md` (criar pasta `content/outline/` se não existir, mesmo slug do arquivo de entrada).
 8. Rodar a skill `/marca-texto` (`.claude/skills/marca-texto/SKILL.md`) nesse mesmo arquivo recém-salvo, pra destacar os trechos-chave antes de considerar a tarefa concluída.
 
