@@ -58,6 +58,7 @@ Exemplo:
    - **Não usar prefixo fixo.** A frase "Participo desta ceia com meus irmãos e..." está proibida — cada capítulo tem abertura própria.
    - A abertura nasce do contexto do capítulo: reler o `## Resumo` e o `## Texto completo` do arquivo de origem em `content/youtube/` e começar a declaração pela imagem/tema central daquele capítulo (ex.: a botija de azeite, o vento contrário, a coragem, a esperança ancorada), em primeira pessoa e no presente.
    - Cada capítulo deve ter abertura diferente da dos capítulos anteriores já salvos em `content/outline/` — conferir os arquivos existentes antes de escrever, pra não repetir fórmula.
+   - Ambas (Pão e Vinho) devem amarrar o mesmo tema central do capítulo — não só o Pão. Vinho não pode ser genérico/repetição de outra live: extrair o tema central específico deste capítulo e aplicar nas duas declarações, cada uma com sua própria variação de frase.
    - Dentro da mesma frase, amarrar o elemento da ceia: "como do corpo de Cristo" (Pão) ou "bebo do sangue de Cristo" (Vinho), ligado por "e" ou "porque" — nunca como frase à parte.
    - Exemplos (formato, não fórmula a copiar):
      - Pão (Cap. Botija de azeite): "A botija que Deus enche não seca, e por isso como do corpo de Cristo sabendo que nEle o pouco vira multiplicação de graça!"
