@@ -12,7 +12,7 @@ A mensagem é sempre enviada **no dia** da live — o texto fala do capítulo de
 ## Uso
 
 ```
-/mensagem-whatsapp <caminho/do/arquivo.md> [--instagram <url>] [--saudacao "Boa tarde"]
+/mensagem-whatsapp <caminho/do/arquivo.md> [--saudacao "Boa tarde"]
 ```
 
 Exemplo:
@@ -61,7 +61,7 @@ https://diego-dm-morais.github.io/a-escada-da-multiplicacao/
 - **Convite final também muda a cada capítulo**, mas sempre com as três coisas: convite para participar, motivação e desejo de um lindo dia.
 - **Links:**
   - YouTube: o do capítulo do dia, lido do próprio `.md`.
-  - Instagram: `https://www.instagram.com/prisaiasnog/` (padrão; só muda se o usuário passar `--instagram`).
+  - Instagram: `https://www.instagram.com/prisaiasnog/` — **fixo, sempre esse, em toda mensagem**.
   - Site (mapa mental geral): `https://diego-dm-morais.github.io/a-escada-da-multiplicacao/` — **fixo, sempre esse, em toda mensagem**.
 - **Saudação:** `Bom dia` por padrão (a live é de manhã); só muda se o usuário passar `--saudacao`.
 - Emojis com moderação, como no template — abertura (🙏❤️), links (📖, 🧠) e fechamento (🙏🔥).

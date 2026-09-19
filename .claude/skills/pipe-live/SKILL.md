@@ -40,7 +40,7 @@ Roda o fluxo completo a partir de um link do YouTube, em ordem:
    - Não remover, reordenar nem reescrever os `<li>` existentes — só inserir o novo ao final, na ordem cronológica dos capítulos.
 6. Rodar a skill `mensagem-whatsapp` (`.claude/skills/mensagem-whatsapp/SKILL.md`) passando o arquivo de `content/youtube/<titulo-slug>.md`.
    - Confere geração de `content/whatsapp/<titulo-slug>.md`.
-   - A mensagem precisa sair com o link do YouTube deste capítulo, o link do Instagram e o link fixo do site — e com frase de motivação nova, diferente das mensagens já salvas em `content/whatsapp/`.
+   - A mensagem precisa sair com o link do YouTube deste capítulo e os dois links fixos (Instagram e site) — e com frase de motivação nova, diferente das mensagens já salvas em `content/whatsapp/`.
 7. Commitar e dar push pra `main`:
    - `git add -A`
    - `git commit -m "..."` (mensagem descrevendo o capítulo processado)
