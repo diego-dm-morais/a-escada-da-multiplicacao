@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiplicação na Vida de Uns aos Outros</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+  :root{
+    --bg:#ffffff;
+    --ink:#3a332c;
+    --ink-soft:#6b6058;
+    --rose:#f6d3d3;
+    --rose-ink:#8a3f3f;
+    --teal:#c3e7e0;
+    --teal-ink:#2e6b5e;
+    --blue:#cfe1f5;
+    --blue-ink:#2e5580;
+    --gold:#f3d98a;
+    --gold-ink:#8a6a1a;
+    --lav:#e4d6ef;
+    --lav-ink:#5f3d7a;
+    --sand:#f6e7cf;
+    --sand-ink:#8a5a1a;
+    --center:#e8a33d;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Nunito',system-ui,sans-serif;
+    padding-inline:20px;
+    padding-block:36px;
+  }
+
+  .wrap{max-width:1100px;margin:0 auto}
+
+  .kicker{
+    text-align:center;
+    font-size:0.85rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold-ink);
+    font-weight:800;
+    margin-bottom:6px;
+  }
+
+  h1{
+    font-family:'Caveat',cursive;
+    font-weight:700;
+    text-align:center;
+    font-size:clamp(2.4rem,6vw,4rem);
+    margin:0 0 6px;
+    color:var(--ink);
+    text-wrap:balance;
+  }
+
+  .sub{
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:1rem;
+    margin-bottom:36px;
+  }
+
+  .center-illustration{
+    display:flex;
+    justify-content:center;
+    margin-bottom:28px;
+  }
+  .jar{
+    width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #fff2d0, var(--center) 70%);
+    display:flex;align-items:center;justify-content:center;
+    font-size:52px;
+    box-shadow:0 10px 30px -12px rgba(180,120,20,.45);
+    border:3px solid #fff;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    position:relative;
+  }
+  @media (max-width:760px){
+    .grid{grid-template-columns:1fr}
+  }
+
+  .card{
+    border-radius:26px;
+    padding:22px 22px 20px;
+    position:relative;
+    box-shadow:0 12px 26px -16px rgba(60,40,20,.28);
+    border:2px solid rgba(255,255,255,.7);
+  }
+  .card h3{
+    font-family:'Caveat',cursive;
+    font-size:1.6rem;
+    margin:0 0 8px;
+    font-weight:700;
+  }
+  .card p{
+    margin:0 0 8px;
+    font-size:.92rem;
+    line-height:1.45;
+    color:var(--ink);
+  }
+  .ref{
+    font-size:.8rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    border-top:1px dashed rgba(0,0,0,.15);
+    padding-top:8px;
+    margin-top:10px;
+  }
+  .icon{
+    font-size:1.6rem;
+    display:inline-block;
+    margin-bottom:6px;
+  }
+
+  .c1{background:var(--rose);color:var(--rose-ink)}
+  .c1 h3{color:var(--rose-ink)}
+  .c2{background:var(--teal);color:var(--teal-ink)}
+  .c2 h3{color:var(--teal-ink)}
+  .c3{background:var(--blue);color:var(--blue-ink)}
+  .c3 h3{color:var(--blue-ink)}
+  .c4{background:var(--sand);color:var(--sand-ink)}
+  .c4 h3{color:var(--sand-ink)}
+  .c5{background:var(--lav);color:var(--lav-ink)}
+  .c5 h3{color:var(--lav-ink)}
+  .c6{background:var(--gold);color:var(--gold-ink)}
+  .c6 h3{color:var(--gold-ink)}
+
+  .quote{
+    grid-column:1 / -1;
+    background:linear-gradient(135deg,#fff7e6,#fdeee0);
+    border-radius:26px;
+    padding:26px 30px;
+    text-align:center;
+    border:2px dashed var(--gold-ink);
+    margin-top:4px;
+  }
+  .quote p{
+    font-family:'Caveat',cursive;
+    font-size:clamp(1.5rem,3vw,2.1rem);
+    color:var(--ink);
+    margin:0 0 6px;
+    font-weight:700;
+  }
+  .quote span{
+    font-size:.85rem;
+    color:var(--ink-soft);
+    letter-spacing:.04em;
+  }
+
+  footer{
+    margin-top:40px;
+    text-align:center;
+  }
+  footer .closing{
+    font-family:'Caveat',cursive;
+    font-size:clamp(1.4rem,3vw,1.9rem);
+    color:var(--gold-ink);
+    max-width:640px;
+    margin:0 auto 10px;
+    line-height:1.3;
+    font-weight:700;
+  }
+  footer .keywords{
+    font-size:.8rem;
+    color:var(--ink-soft);
+    letter-spacing:.03em;
+  }
+</style>
+
+<div class="wrap">
+  <div class="kicker">A Escada da Multiplicação · Cap. 8</div>
+  <h1>Multiplicação através da vida de uns aos outros</h1>
+  <div class="sub">Pr. Wilson Silva · 21/09 · João 17:14-23 (ACF)</div>
+
+  <div class="center-illustration">
+    <div class="jar">🤝</div>
+  </div>
+
+  <div class="grid">
+    <div class="card c1">
+      <span class="icon">🪜</span>
+      <h3>Segundo degrau</h3>
+      <p>O primeiro degrau é a multiplicação que atende a minha necessidade. O segundo é superior: a multiplicação que, além de me abençoar, abençoa todo o corpo em que estou inserido.</p>
+      <div class="ref">2 Reis 4:1-7 (ACF)</div>
+    </div>
+
+    <div class="card c2">
+      <span class="icon">🧒</span>
+      <h3>Criança não se casa</h3>
+      <p>Criança fica com os dez brinquedos; adulto reparte, porque pensa na família. Querer a multiplicação do corpo é sinal de que venci o individualismo e cresci — e vamos casar com Cristo.</p>
+      <div class="ref">Efésios 4:13 (ACF)</div>
+    </div>
+
+    <div class="card c3">
+      <span class="icon">🙏</span>
+      <h3>O único pedido de Jesus</h3>
+      <p>Na véspera da cruz Ele podia pedir prosperidade, cura, relacionamentos restaurados. Pediu uma coisa só: que todos sejam um. E rogou também por você, que creria depois.</p>
+      <div class="ref">João 17:20-21 (ACF)</div>
+    </div>
+
+    <div class="card c4">
+      <span class="icon">🥔</span>
+      <h3>Saco de batatas x purê</h3>
+      <p>União humana é batata no saco: junta, mas dá pra separar. A unidade da família divina é purê — Pai, Filho e Espírito tão unos que não se separa quem é quem.</p>
+      <div class="ref">João 17:23 (ACF)</div>
+    </div>
+
+    <div class="card c5">
+      <span class="icon">✋</span>
+      <h3>A mão e o corpo</h3>
+      <p>Ninguém corta a própria mão. A mão não come, mas leva a comida à boca — e é nutrida pelo corpo que alimentou. Filtro: isso abençoa o corpo? Então estou dentro.</p>
+      <div class="ref">1 Coríntios 12:25-26 (ACF)</div>
+    </div>
+
+    <div class="card c6">
+      <span class="icon">🎁</span>
+      <h3>Dar é mão dupla</h3>
+      <p>Quem recebe é abençoado e fortalecido; quem dá é abençoado, fortalecido e aperfeiçoado no estilo de vida do Senhor. O reino não empobrece quem reparte.</p>
+      <div class="ref">Atos 20:35 (ACF)</div>
+    </div>
+
+    <div class="card c1">
+      <span class="icon">🌍</span>
+      <h3>Ser bênção</h3>
+      <p>Foi a única recomendação de Deus a Abraão ao chamá-lo — e vale pra nós, filhos de Abraão pela fé. Deus não tira de ninguém: Ele reparte.</p>
+      <div class="ref">Gênesis 12:2 (ACF)</div>
+    </div>
+
+    <div class="card c2">
+      <span class="icon">🔥</span>
+      <h3>Espírito de jejum</h3>
+      <p>A igreja ora, eu oro; a igreja enfrenta, eu enfrento; a igreja multiplica, multiplica em mim. Unidade também é não perder a conexão com o corpo no jejum.</p>
+      <div class="ref">Atos 2:44-47 (ACF)</div>
+    </div>
+
+    <div class="quote">
+      <p>"Eu neles, e tu em mim, para que eles sejam perfeitos em unidade, e para que o mundo conheça que tu me enviaste a mim, e que os tens amado como me tens amado a mim."</p>
+      <span>João 17:23 — Almeida Corrigida Fiel (ACF)</span>
+    </div>
+  </div>
+
+  <footer>
+    <p class="closing">Cristo já nos fez um com o Pai na cruz — a unidade não é peso que carregamos, é graça que transborda. Quem descobriu que foi amado primeiro abre a mão rindo!</p>
+    <p class="keywords">unidade | purê de batatas | vida de corpo | ser bênção | dar é mão dupla | adulto espiritual | Cristo no centro</p>
+  </footer>
+</div>
+</html>
