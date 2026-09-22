@@ -1,0 +1,258 @@
+<title>A Entrega e o Fruto Samuel</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+  :root{
+    --bg:#ffffff;
+    --ink:#3a332c;
+    --ink-soft:#6b6058;
+    --rose:#f6d3d3;
+    --rose-ink:#8a3f3f;
+    --teal:#c3e7e0;
+    --teal-ink:#2e6b5e;
+    --blue:#cfe1f5;
+    --blue-ink:#2e5580;
+    --gold:#f3d98a;
+    --gold-ink:#8a6a1a;
+    --lav:#e4d6ef;
+    --lav-ink:#5f3d7a;
+    --sand:#f6e7cf;
+    --sand-ink:#8a5a1a;
+    --center:#e8a33d;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Nunito',system-ui,sans-serif;
+    padding-inline:20px;
+    padding-block:36px;
+  }
+
+  .wrap{max-width:1100px;margin:0 auto}
+
+  .kicker{
+    text-align:center;
+    font-size:0.85rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold-ink);
+    font-weight:800;
+    margin-bottom:6px;
+  }
+
+  h1{
+    font-family:'Caveat',cursive;
+    font-weight:700;
+    text-align:center;
+    font-size:clamp(2.4rem,6vw,4rem);
+    margin:0 0 6px;
+    color:var(--ink);
+    text-wrap:balance;
+  }
+
+  .sub{
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:1rem;
+    margin-bottom:36px;
+  }
+
+  .center-illustration{
+    display:flex;
+    justify-content:center;
+    margin-bottom:28px;
+  }
+  .jar{
+    width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #fff2d0, var(--center) 70%);
+    display:flex;align-items:center;justify-content:center;
+    font-size:52px;
+    box-shadow:0 10px 30px -12px rgba(180,120,20,.45);
+    border:3px solid #fff;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    position:relative;
+  }
+  @media (max-width:760px){
+    .grid{grid-template-columns:1fr}
+  }
+
+  .card{
+    border-radius:26px;
+    padding:22px 22px 20px;
+    position:relative;
+    box-shadow:0 12px 26px -16px rgba(60,40,20,.28);
+    border:2px solid rgba(255,255,255,.7);
+  }
+  .card h3{
+    font-family:'Caveat',cursive;
+    font-size:1.6rem;
+    margin:0 0 8px;
+    font-weight:700;
+  }
+  .card p{
+    margin:0 0 8px;
+    font-size:.92rem;
+    line-height:1.45;
+    color:var(--ink);
+  }
+  .ref{
+    font-size:.8rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    border-top:1px dashed rgba(0,0,0,.15);
+    padding-top:8px;
+    margin-top:10px;
+  }
+  .icon{
+    font-size:1.6rem;
+    display:inline-block;
+    margin-bottom:6px;
+  }
+
+  .c1{background:var(--rose);color:var(--rose-ink)}
+  .c1 h3{color:var(--rose-ink)}
+  .c2{background:var(--teal);color:var(--teal-ink)}
+  .c2 h3{color:var(--teal-ink)}
+  .c3{background:var(--blue);color:var(--blue-ink)}
+  .c3 h3{color:var(--blue-ink)}
+  .c4{background:var(--sand);color:var(--sand-ink)}
+  .c4 h3{color:var(--sand-ink)}
+  .c5{background:var(--lav);color:var(--lav-ink)}
+  .c5 h3{color:var(--lav-ink)}
+  .c6{background:var(--gold);color:var(--gold-ink)}
+  .c6 h3{color:var(--gold-ink)}
+
+  .quote{
+    grid-column:1 / -1;
+    background:linear-gradient(135deg,#fff7e6,#fdeee0);
+    border-radius:26px;
+    padding:26px 30px;
+    text-align:center;
+    border:2px dashed var(--gold-ink);
+    margin-top:4px;
+  }
+  .quote p{
+    font-family:'Caveat',cursive;
+    font-size:clamp(1.5rem,3vw,2.1rem);
+    color:var(--ink);
+    margin:0 0 6px;
+    font-weight:700;
+  }
+  .quote span{
+    font-size:.85rem;
+    color:var(--ink-soft);
+    letter-spacing:.04em;
+  }
+
+  footer{
+    margin-top:40px;
+    text-align:center;
+  }
+  footer .closing{
+    font-family:'Caveat',cursive;
+    font-size:clamp(1.4rem,3vw,1.9rem);
+    color:var(--gold-ink);
+    max-width:640px;
+    margin:0 auto 10px;
+    line-height:1.3;
+    font-weight:700;
+  }
+  footer .keywords{
+    font-size:.8rem;
+    color:var(--ink-soft);
+    letter-spacing:.03em;
+  }
+</style>
+
+<div class="wrap">
+  <div class="kicker">A Escada da Multiplicação · Cap. 9</div>
+  <h1>A Entrega e o Fruto Samuel</h1>
+  <div class="sub">Pr. Wilson Silva · 22/09 · 1 Samuel 1.9-18 e 2.21 (ACF)</div>
+
+  <div class="center-illustration">
+    <div class="jar">🤲</div>
+  </div>
+
+  <div class="grid">
+    <div class="card c1">
+      <span class="icon">🪜</span>
+      <h3>O segundo degrau</h3>
+      <p>O primeiro degrau multiplica só a minha vida — a viúva e o azeite. O segundo é maior: a multiplicação que envolve o corpo de Cristo e abençoa quem está à minha volta.</p>
+      <div class="ref">2 Reis 4.1-7 (ACF)</div>
+    </div>
+
+    <div class="card c2">
+      <span class="icon">😰</span>
+      <h3>17 anos de desespero</h3>
+      <p>Ana era estéril, provocada por Penina. Desespero é quando a esperança já foi embora, mas o desejo continua — tempestade por dentro, que destrói relacionamentos e tira até a vontade de comer.</p>
+      <div class="ref">1 Samuel 1.9-10 (ACF)</div>
+    </div>
+
+    <div class="card c3">
+      <span class="icon">⚖️</span>
+      <h3>Ninguém nasceu pra competir</h3>
+      <p>Ana queria filho para vencer Penina. Mas não temos concorrente: temos propósito. Enquanto o foco era a competição, só vinha mais desespero.</p>
+      <div class="ref">Gálatas 6.4 (ACF)</div>
+    </div>
+
+    <div class="card c4">
+      <span class="icon">🙏</span>
+      <h3>O voto que mudou tudo</h3>
+      <p>Um dia ela mudou o foco: quis apenas a alegria de ser mãe e entregou o filho ao Senhor antes mesmo dele existir. Ali deixou de pensar como criança e passou a pensar no todo.</p>
+      <div class="ref">1 Samuel 1.11 (ACF)</div>
+    </div>
+
+    <div class="card c5">
+      <span class="icon">🕊️</span>
+      <h3>Alinhamento traz paz</h3>
+      <p>Antes do filho chegar, a paz chegou: ela comeu e o semblante já não era triste. Desalinhado entra angústia; alinhado ao coração de Deus, entra descanso.</p>
+      <div class="ref">1 Samuel 1.18 (ACF)</div>
+    </div>
+
+    <div class="card c6">
+      <span class="icon">🌾</span>
+      <h3>Entregou um, recebeu cinco</h3>
+      <p>Samuel nasceu e foi consagrado no tabernáculo — e Ana teve mais três filhos e duas filhas. Ela ganhou, e o reino ganhou um líder verdadeiro: entregar não esvazia, multiplica.</p>
+      <div class="ref">1 Samuel 2.21 (ACF)</div>
+    </div>
+
+    <div class="card c1">
+      <span class="icon">🤝</span>
+      <h3>A necessidade encontrou o reino</h3>
+      <p>Israel também vivia crise: o sacerdócio pensava em si mesmo e Deus procurava alguém consagrado desde a infância. A necessidade de Ana encontrou a necessidade do reino.</p>
+      <div class="ref">1 Samuel 2.12 e 2.35 (ACF)</div>
+    </div>
+
+    <div class="card c2">
+      <span class="icon">☁️</span>
+      <h3>O estilo de vida dos céus</h3>
+      <p>Quem multiplica pensando no corpo não recebe só bênção — passa a pensar como Deus pensa. E Deus não fica devendo a ninguém.</p>
+      <div class="ref">Romanos 8.32 (ACF)</div>
+    </div>
+
+    <div class="card c3">
+      <span class="icon">🔥</span>
+      <h3>Não perca o espírito de jejum</h3>
+      <p>Ainda que não dê pra jejuar de comida, fique conectado ao corpo. É tempo de renovar a mente e preparar a multiplicação que abençoa a todos.</p>
+      <div class="ref">Isaías 58.6-8 (ACF)</div>
+    </div>
+
+    <div class="quote">
+      <p>"Visitou, pois, o Senhor a Ana, e ela concebeu e teve três filhos e duas filhas; e o jovem Samuel crescia diante do Senhor."</p>
+      <span>1 Samuel 2.21 — Almeida Corrigida Fiel (ACF)</span>
+    </div>
+  </div>
+
+  <footer>
+    <p class="closing">Antes de qualquer entrega nossa, o Pai já entregou o Filho — e quem descansa nessa graça não dá pra merecer, dá porque transborda!</p>
+    <p class="keywords">entrega | Ana | Samuel | segundo degrau | reino | graça | multiplicação | Cristo no centro</p>
+  </footer>
+</div>

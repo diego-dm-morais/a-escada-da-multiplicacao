@@ -2,6 +2,7 @@
 """Convert a YouTube video into a Markdown document with metadata and transcript."""
 
 import argparse
+import os
 import re
 import sys
 import tempfile
@@ -37,8 +38,28 @@ def fetch_transcript(video_id: str) -> list[dict]:
     return fetched.to_raw_data()
 
 
+def _register_cuda_dlls() -> None:
+    """Make pip-installed NVIDIA CUDA DLLs visible to ctranslate2 on Windows."""
+    if not hasattr(os, "add_dll_directory"):
+        return
+    import glob
+    import site
+
+    roots = list(site.getsitepackages()) + [site.getusersitepackages()]
+    for root in roots:
+        for bin_dir in glob.glob(os.path.join(root, "nvidia", "*", "bin")):
+            try:
+                os.add_dll_directory(bin_dir)
+            except OSError:
+                pass
+            # ctranslate2 loads cuBLAS/cuDNN lazily via LoadLibrary, which ignores
+            # add_dll_directory, so PATH is what actually makes them resolvable.
+            os.environ["PATH"] = bin_dir + os.pathsep + os.environ.get("PATH", "")
+
+
 def transcribe_audio(url: str) -> list[dict]:
     """Fallback: download audio and transcribe locally with faster-whisper."""
+    _register_cuda_dlls()
     from faster_whisper import WhisperModel
 
     print("No captions available, downloading audio for local transcription...", file=sys.stderr)
@@ -62,10 +83,13 @@ def transcribe_audio(url: str) -> list[dict]:
         print("Transcribing audio (faster-whisper, this may take a while)...", file=sys.stderr)
         try:
             model = WhisperModel("small", device="cuda", compute_type="float16")
-        except Exception:
+            segments, _info = model.transcribe(str(mp3_path), language=None, vad_filter=True)
+            return [{"text": segment.text} for segment in segments]
+        except Exception as exc:
+            print(f"GPU transcription unavailable ({exc}); falling back to CPU...", file=sys.stderr)
             model = WhisperModel("small", device="cpu", compute_type="int8")
-        segments, _info = model.transcribe(str(mp3_path), language=None, vad_filter=True)
-        return [{"text": segment.text} for segment in segments]
+            segments, _info = model.transcribe(str(mp3_path), language=None, vad_filter=True)
+            return [{"text": segment.text} for segment in segments]
 
 
 def slugify(title: str) -> str:
