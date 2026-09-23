@@ -1,0 +1,238 @@
+<!doctype html>
+<title>Cap. 10 — A Multiplicação dos Pães</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+  :root{
+    --bg:#ffffff;
+    --ink:#3a332c;
+    --ink-soft:#6b6058;
+    --rose:#f6d3d3;
+    --rose-ink:#8a3f3f;
+    --teal:#c3e7e0;
+    --teal-ink:#2e6b5e;
+    --blue:#cfe1f5;
+    --blue-ink:#2e5580;
+    --gold:#f3d98a;
+    --gold-ink:#8a6a1a;
+    --lav:#e4d6ef;
+    --lav-ink:#5f3d7a;
+    --sand:#f6e7cf;
+    --sand-ink:#8a5a1a;
+    --center:#e8a33d;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Nunito',system-ui,sans-serif;
+    padding-inline:20px;
+    padding-block:36px;
+  }
+
+  .wrap{max-width:1100px;margin:0 auto}
+
+  .kicker{
+    text-align:center;
+    font-size:0.85rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold-ink);
+    font-weight:800;
+    margin-bottom:6px;
+  }
+
+  h1{
+    font-family:'Caveat',cursive;
+    font-weight:700;
+    text-align:center;
+    font-size:clamp(2.4rem,6vw,4rem);
+    margin:0 0 6px;
+    color:var(--ink);
+    text-wrap:balance;
+  }
+
+  .sub{
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:1rem;
+    margin-bottom:36px;
+  }
+
+  .center-illustration{
+    display:flex;
+    justify-content:center;
+    margin-bottom:28px;
+  }
+  .jar{
+    width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #fff2d0, var(--center) 70%);
+    display:flex;align-items:center;justify-content:center;
+    font-size:52px;
+    box-shadow:0 10px 30px -12px rgba(180,120,20,.45);
+    border:3px solid #fff;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    position:relative;
+  }
+  @media (max-width:760px){
+    .grid{grid-template-columns:1fr}
+  }
+
+  .card{
+    border-radius:26px;
+    padding:22px 22px 20px;
+    position:relative;
+    box-shadow:0 12px 26px -16px rgba(60,40,20,.28);
+    border:2px solid rgba(255,255,255,.7);
+  }
+  .card h3{
+    font-family:'Caveat',cursive;
+    font-size:1.6rem;
+    margin:0 0 8px;
+    font-weight:700;
+  }
+  .card p{
+    margin:0 0 8px;
+    font-size:.92rem;
+    line-height:1.45;
+    color:var(--ink);
+  }
+  .ref{
+    font-size:.8rem;
+    font-style:italic;
+    color:var(--ink-soft);
+    border-top:1px dashed rgba(0,0,0,.15);
+    padding-top:8px;
+    margin-top:10px;
+  }
+  .icon{
+    font-size:1.6rem;
+    display:inline-block;
+    margin-bottom:6px;
+  }
+
+  .c1{background:var(--rose);color:var(--rose-ink)}
+  .c1 h3{color:var(--rose-ink)}
+  .c2{background:var(--teal);color:var(--teal-ink)}
+  .c2 h3{color:var(--teal-ink)}
+  .c3{background:var(--blue);color:var(--blue-ink)}
+  .c3 h3{color:var(--blue-ink)}
+  .c4{background:var(--sand);color:var(--sand-ink)}
+  .c4 h3{color:var(--sand-ink)}
+  .c5{background:var(--lav);color:var(--lav-ink)}
+  .c5 h3{color:var(--lav-ink)}
+  .c6{background:var(--gold);color:var(--gold-ink)}
+  .c6 h3{color:var(--gold-ink)}
+
+  .quote{
+    grid-column:1 / -1;
+    background:linear-gradient(135deg,#fff7e6,#fdeee0);
+    border-radius:26px;
+    padding:26px 30px;
+    text-align:center;
+    border:2px dashed var(--gold-ink);
+    margin-top:4px;
+  }
+  .quote p{
+    font-family:'Caveat',cursive;
+    font-size:clamp(1.5rem,3vw,2.1rem);
+    color:var(--ink);
+    margin:0 0 6px;
+    font-weight:700;
+  }
+  .quote span{
+    font-size:.85rem;
+    color:var(--ink-soft);
+    letter-spacing:.04em;
+  }
+
+  footer{
+    margin-top:40px;
+    text-align:center;
+  }
+  footer .closing{
+    font-family:'Caveat',cursive;
+    font-size:clamp(1.4rem,3vw,1.9rem);
+    color:var(--gold-ink);
+    max-width:640px;
+    margin:0 auto 10px;
+    line-height:1.3;
+    font-weight:700;
+  }
+  footer .keywords{
+    font-size:.8rem;
+    color:var(--ink-soft);
+    letter-spacing:.03em;
+  }
+</style>
+
+<div class="wrap">
+  <div class="kicker">21 Dias de Jejum e Oração · Cap. 10</div>
+  <h1>A Multiplicação dos Pães</h1>
+  <div class="sub">Pr. Wilson Silva · 23/09 · Marcos 6:30-44</div>
+
+  <div class="center-illustration">
+    <div class="jar">🍞</div>
+  </div>
+
+  <div class="grid">
+    <div class="card c1">
+      <span class="icon">🪜</span>
+      <h3>Segundo degrau</h3>
+      <p>Depois de aprender a multiplicação individual, subimos ao degrau que abençoa o corpo de Cristo — repartir sem medo de ficar sem.</p>
+      <div class="ref">Escada da multiplicação — degrau 2</div>
+    </div>
+
+    <div class="card c2">
+      <span class="icon">🍞</span>
+      <h3>Dai-lhes vós mesmos</h3>
+      <p>Diante de 10 mil famintos em lugar deserto, Jesus não manda embora o povo: manda os discípulos resolverem, porque o reino é autossuficiente.</p>
+      <div class="ref">Marcos 6:37, ACF</div>
+    </div>
+
+    <div class="card c3">
+      <span class="icon">🙏</span>
+      <h3>Coração agradecido</h3>
+      <p>Antes do milagre, Jesus levanta os olhos e agradece pelo pouco. O verdadeiro milagre começa na gratidão, não na quantidade.</p>
+      <div class="ref">Marcos 6:41, ACF</div>
+    </div>
+
+    <div class="card c4">
+      <span class="icon">🧺</span>
+      <h3>Cinco pães, dois peixes</h3>
+      <p>Entre 5.000 homens, só um adolescente ofereceu o que tinha. A multiplicação começa a partir do pouco que já está na mão.</p>
+      <div class="ref">Marcos 6:38, ACF</div>
+    </div>
+
+    <div class="card c5">
+      <span class="icon">😨</span>
+      <h3>O medo de ficar sem</h3>
+      <p>4.999 guardaram o que tinham por medo de faltar. Só quem entende que faz parte do corpo se dispõe a repartir.</p>
+      <div class="ref">Marcos 6:36, ACF</div>
+    </div>
+
+    <div class="card c6">
+      <span class="icon">🎉</span>
+      <h3>Cesto que voltou cheio</h3>
+      <p>Todos comeram e se fartaram; sobraram 12 cestos. Quem oferece ao corpo de Cristo nunca sai perdendo — recebe de volta e ainda entra pra história.</p>
+      <div class="ref">Marcos 6:42-43, ACF</div>
+    </div>
+
+    <div class="quote">
+      <p>"E Deus é poderoso para fazer abundar em vós toda a graça, para que, tendo sempre, em tudo, toda a suficiência, abundeis em toda a boa obra."</p>
+      <span>2 Coríntios 9:8 — Almeida Corrigida Fiel (ACF)</span>
+    </div>
+  </div>
+
+  <footer>
+    <p class="closing">Cinco pães nas mãos de um menino não bastavam pra ninguém — nas mãos de Jesus fartaram dez mil, porque na cruz o pouco que somos foi tomado por Cristo e multiplicado em graça plena, e por Ele, só por Ele, temos acesso ao Pai, pela fé, não por mérito!</p>
+    <p class="keywords">corpo de Cristo | gratidão | oferta | fé | fartura | acesso ao Pai | Cristo no centro</p>
+  </footer>
+</div>
